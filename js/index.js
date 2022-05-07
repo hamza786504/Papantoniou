@@ -50,6 +50,100 @@ $(document).ready(function(){
             }
         }
     });
+    
 
-    // document.querySelector(".owl-item.active")[1].style.marginTop = "20px !important";
+
+
+    var multipleCardCarousel = document.querySelector(
+        "#services_carousel"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+          interval: false,
+        });
+        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+        var cardWidth = $(".carousel-item").width();
+        var scrollPosition = 0;
+        $("#services_carousel .carousel-control-next").on("click", function () {
+          if (scrollPosition < carouselWidth - cardWidth * 4) {
+            scrollPosition += cardWidth;
+            $("#services_carousel .carousel-inner").animate(
+              { scrollLeft: scrollPosition },
+              600
+            );
+          }
+        });
+        $("#services_carousel .carousel-control-prev").on("click", function () {
+          if (scrollPosition > 0) {
+            scrollPosition -= cardWidth;
+            $("#services_carousel .carousel-inner").animate(
+              { scrollLeft: scrollPosition },
+              600
+            );
+          }
+        });
+      } else {
+        $(multipleCardCarousel).addClass("slide");
+      }
+
+
+
+
+
+
+
+      var multipleCardCarousel_for_news = document.querySelector(
+        "#our_news_carousel"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        var carousel = new bootstrap.Carousel(multipleCardCarousel_for_news, {
+          interval: false,
+        });
+        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+        var cardWidth = $(".carousel-item").width();
+        var scrollPosition = 0;
+        $("#our_news_carousel .carousel-control-next").on("click", function () {
+          if (scrollPosition < carouselWidth - cardWidth * 4) {
+            scrollPosition += cardWidth;
+            $("#our_news_carousel .carousel-inner").animate(
+              { scrollLeft: scrollPosition },
+              600
+            );
+          }
+        });
+        $("#our_news_carousel .carousel-control-prev").on("click", function () {
+          if (scrollPosition > 0) {
+            scrollPosition -= cardWidth;
+            $("#our_news_carousel .carousel-inner").animate(
+              { scrollLeft: scrollPosition },
+              600
+            );
+          }
+        });
+      } else {
+        $(multipleCardCarousel_for_news).addClass("slide");
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 })
+
+
+
+
+

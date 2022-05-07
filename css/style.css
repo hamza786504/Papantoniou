@@ -124,7 +124,7 @@ a{
     color: black;
     line-height: 1em;
 }
-.services , .our_news{
+.services{
     margin: 5% auto;
     margin-bottom: 0%;
     margin-bottom: 0;
@@ -132,7 +132,7 @@ a{
     align-items: stretch;
     justify-content: space-between;
 }
-.services .service_card .service_count{
+#services_carousel .carousel-item .service_count{
     color: #eff3f4;
     font-size: 10em;
 }
@@ -142,22 +142,19 @@ a{
     position: relative;
     height: 30em;
 }
-.service_card .service_count{
+#services_carousel .carousel-item .service_count{
     line-height: 0.7em;
     margin-top: 0;
 }
-.service_card .service_details{
+#services_carousel .carousel-item .service_details{
     margin-top: -1.3em;
 }
-.service_card .service_details .title{
+#services_carousel .carousel-item .service_details .title{
     font-size: 2em;
     color: black;
     font-weight: normal;
 }
-/* .service_card{
-    padding-left: 0;
-} */
-.service_card .service_details .description{
+#services_carousel .carousel-item .service_details .description{
     color: #b1b1b1;
     text-align: start;
     font-size: 0.8em;
@@ -246,11 +243,12 @@ a{
     content: "";
     background-color: black;
 }
-.our_news{
+.news_section{
     background-color: #eff3f4;
     position: relative;
     height: 19em;
     margin-top: 10em;
+    padding-top: 5em;
 }
 .our_news .item{
     display: flex;
@@ -259,13 +257,12 @@ a{
     justify-content: start;
     padding: 3em;
 }
-.our_news .item .blog_image{
+#our_news_carousel .card .blog_image{
     width: 100%;
-    max-height: 150px;
+    max-height: 9em;
     overflow: hidden;
 }
-.our_news .item .blog_image img{
-    object-fit: contain;
+#our_news_carousel .card .blog_image img{
     width: 100%;
     margin-left: 0;
 }
@@ -310,22 +307,22 @@ a{
 .our_news.owl-drag .owl-item.active{
     margin-right: 0 !important;
 }
-/* #our_news .blog_image{
-    height: 10em;
-    width: 13em;
+.blog_image{
+    height: 14em;
+    width: 100%;
 }
-#our_news .blog_image img{
-    object-fit: cover;
+.blog_image img{
+    width: 100%;
 }
-.our_news .blog_title{
+.blog_title{
     font-weight: bold;
 }
-.our_news .blog_desc{
+.blog_desc{
     color: #b1b1b1;
     line-height: 1em;
-} */
+}
 .footer{
-    margin-top: 30em;
+    margin-top: 20em;
     border-top: 1px solid #e3e3e3a6;
 }
 .news_section .section_heading h2{
@@ -356,7 +353,12 @@ footer.footer .row a.meet_teem_link{
 .our_news.owl-carousel .owl-nav{
     top: 40% !important;
 }
-
+#our_news_carousel button.carousel-control-prev{
+    top: 100%;
+}
+#our_news_carousel button.carousel-control-next{
+    top: 100%;
+}
 
 
 
@@ -368,6 +370,103 @@ footer.footer .row a.meet_teem_link{
     margin: 0 auto;
 }
 
+#services_carousel , #our_news_carousel{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.carousel{
+    position: static;
+}
+.carousel-control-prev , .carousel-control-next{
+    background-color: transparent !important;
+}
+.carousel-control-prev-icon , .carousel-control-next-icon{
+    background-image: none;
+    display: flex;
+    /* padding: 5px; */
+    align-items: center;
+    justify-content: start;
+    background-color: transparent !important;
+    color: black;
+    font-size: 4em;
+}
+.services_section , .news_section{
+    width: 98%;
+}
+
+
+#services_carousel .card .item{
+    max-width: 18em;
+    margin: 0 auto;
+}
+#our_news_carousel .card .item{
+    max-width: 25em;
+    margin: 0 auto;
+}
+.card{
+    background-color: transparent !important;
+}
+
+
+.our_news_carousel{
+    margin-top: 10em;
+}
+
+.page .main .section_heading {
+    width: 50%;
+    z-index: 10;
+    top: -5em;
+    left: 7em;
+}
+
+
+
+
+
+
+
+
+
+
+.carousel-inner {
+    padding: 1em;
+  }
+  .card {
+    margin: 0 0.5em;
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
 
 
 
@@ -382,6 +481,12 @@ footer.footer .row a.meet_teem_link{
 
 
 
+
+
+
+
+
+  
 
 
 
